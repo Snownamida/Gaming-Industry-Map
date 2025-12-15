@@ -78,7 +78,7 @@ function getGraphData() {
         value: node.val,
         category: categories.findIndex(c => c.baseKey === node.category),
         label: {
-            show: node.val > 25
+            show: node.val > 25 || node.category === 'Game'
         }
     }));
 
