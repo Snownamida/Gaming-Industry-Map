@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Gaming Industry Map | 全球游戏产业格局图</title>
+    <!-- ECharts CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div id="graph-container"></div>
+        
+        <div class="sidebar">
+            <div class="header">
+                <h1>GAMING MAP</h1>
+                <p>Global Industry Visualization</p>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search Company or Game...">
+            </div>
+
+            <div id="info-panel" class="info-panel">
+                <div class="placeholder-text">Select a node to view details</div>
+            </div>
+            
+            <div class="legend">
+                <h3>Legend</h3>
+                <ul id="legend-list">
+                    <!-- Populated by JS -->
+                </ul>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="resetZoom()">Reset View</button>
+            <button onclick="togglePhysics()">Toggle Physics</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
