@@ -102,6 +102,8 @@ const rawData = {
         { id: 'Hoyoverse', name: 'HoYoverse', name_zh: '米哈游', category: 'Studio', val: 38 },
         { id: 'BlackMythDev', name: 'Game Science', name_zh: '游戏科学', category: 'Studio', val: 30 },
 
+
+
         // --- GAMES ---
         // Microsoft Games
         { id: 'Minecraft', name: 'Minecraft', name_zh: '我的世界', category: 'Game', val: 30 },
@@ -191,6 +193,66 @@ const rawData = {
         { id: 'Genshin', name: 'Genshin Impact', name_zh: '原神', category: 'Game', val: 30 },
         { id: 'HSR', name: 'Honkai: Star Rail', name_zh: '崩坏：星穹铁道', category: 'Game', val: 25 },
         { id: 'BlackMyth', name: 'Black Myth: Wukong', name_zh: '黑神话：悟空', category: 'Game', val: 25 },
+
+        // --- GALGAME / VISUAL NOVEL / JRPG EXPANSIONS ---
+        // Type-Moon
+        { id: 'TypeMoon', name: 'Type-Moon', name_zh: '型月 (Type-Moon)', category: 'Studio', val: 40 },
+        { id: 'FGO', name: 'Fate/Grand Order', name_zh: 'FGO', category: 'Game', val: 35 },
+        { id: 'FateSN', name: 'Fate/stay night', name_zh: 'Fate/stay night', category: 'Game', val: 30 },
+        { id: 'Tsukihime', name: 'Tsukihime', name_zh: '月姬', category: 'Game', val: 30 },
+        { id: 'Mahoyo', name: 'Witch on the Holy Night', name_zh: '魔法使之夜', category: 'Game', val: 25 },
+
+        // Key / Visual Arts (Tencent Parent)
+        { id: 'VisualArts', name: 'Visual Arts', name_zh: 'Visual Arts', category: 'Publisher', val: 30 },
+        { id: 'Key', name: 'Key', name_zh: 'Key社', category: 'Studio', val: 35 },
+        { id: 'Clannad', name: 'Clannad', name_zh: 'Clannad', category: 'Game', val: 30 },
+        { id: 'Air', name: 'Air', name_zh: 'Air', category: 'Game', val: 25 },
+        { id: 'Kanon', name: 'Kanon', name_zh: 'Kanon', category: 'Game', val: 25 },
+        { id: 'SummerPockets', name: 'Summer Pockets', name_zh: '夏日口袋', category: 'Game', val: 25 },
+        { id: 'AngelBeats', name: 'Angel Beats!', name_zh: 'Angel Beats!', category: 'Game', val: 25 },
+
+        // Nitro+ / MAGES. / 5pb.
+        { id: 'NitroPlus', name: 'Nitroplus', name_zh: 'Nitro+', category: 'Studio', val: 30 },
+        { id: 'MAGES', name: 'MAGES.', name_zh: 'MAGES.', category: 'Publisher', val: 30 },
+        { id: 'SteinsGate', name: 'Steins;Gate', name_zh: '命运石之门', category: 'Game', val: 30 },
+        { id: 'ChaosHead', name: 'Chaos;Head', name_zh: '混沌头 (Chaos;Head)', category: 'Game', val: 25 },
+        { id: 'Saya', name: 'Saya no Uta', name_zh: '沙耶之歌', category: 'Game', val: 25 },
+
+        // Falcom
+        { id: 'Falcom', name: 'Nihon Falcom', name_zh: '法夫纳 (Falcom)', category: 'Studio', val: 35 },
+        { id: 'TrailsSeries', name: 'Trails Series', name_zh: '轨迹系列', category: 'Game', val: 30 },
+        { id: 'YsSeries', name: 'Ys Series', name_zh: '伊苏系列', category: 'Game', val: 30 },
+
+        // Koei Tecmo / Gust
+        { id: 'KoeiTecmo', name: 'Koei Tecmo', name_zh: '光荣特库摩', category: 'Publisher', val: 40 },
+        { id: 'Gust', name: 'Gust', name_zh: 'Gust', category: 'Studio', val: 30 },
+        { id: 'TeamNinja', name: 'Team Ninja', name_zh: 'Team Ninja', category: 'Studio', val: 35 },
+        { id: 'AtelierRyza', name: 'Atelier Ryza', name_zh: '莱莎的炼金工房', category: 'Game', val: 25 },
+        { id: 'Nioh2', name: 'Nioh 2', name_zh: '仁王2', category: 'Game', val: 25 },
+        { id: 'NinjaGaiden', name: 'Ninja Gaiden', name_zh: '忍者龙剑传', category: 'Game', val: 25 },
+        { id: 'DoA', name: 'Dead or Alive', name_zh: '死或生', category: 'Game', val: 25 },
+        { id: 'ThreeKingdoms', name: 'Romance of the Three Kingdoms', name_zh: '三国志', category: 'Game', val: 25 },
+
+        // Spike Chunsoft
+        { id: 'SpikeChunsoft', name: 'Spike Chunsoft', name_zh: 'Spike Chunsoft', category: 'Publisher', val: 35 },
+        { id: 'Danganronpa', name: 'Danganronpa', name_zh: '弹丸论破', category: 'Game', val: 30 },
+        { id: 'AITheSomniumFiles', name: 'AI: The Somnium Files', name_zh: '梦境档案', category: 'Game', val: 25 },
+
+        // Cygames
+        { id: 'Cygames', name: 'Cygames', name_zh: 'Cygames', category: 'Publisher', val: 40 },
+        { id: 'GBF', name: 'Granblue Fantasy', name_zh: '碧蓝幻想', category: 'Game', val: 30 },
+        { id: 'UmaMusume', name: 'Uma Musume', name_zh: '赛马娘', category: 'Game', val: 35 },
+        { id: 'Shadowverse', name: 'Shadowverse', name_zh: '影之诗', category: 'Game', val: 25 },
+
+        // Other Iconic JRPG/VN
+        { id: 'AliceSoft', name: 'AliceSoft', name_zh: 'AliceSoft', category: 'Studio', val: 30 },
+        { id: 'Rance', name: 'Rance Series', name_zh: '兰斯系列', category: 'Game', val: 25 },
+        { id: 'Aquaplus', name: 'Aquaplus', name_zh: 'Aquaplus', category: 'Publisher', val: 30 },
+        { id: 'Utawarerumono', name: 'Utawarerumono', name_zh: '传颂之物', category: 'Game', val: 25 },
+        { id: 'Frontwing', name: 'Frontwing', name_zh: 'Frontwing', category: 'Studio', val: 25 },
+        { id: 'Gritaia', name: 'Grisaia Series', name_zh: '灰色的果实', category: 'Game', val: 25 },
+        { id: 'NekoparaDev', name: 'NEKO WORKs', name_zh: 'NEKO WORKs', category: 'Studio', val: 25 },
+        { id: 'Nekopara', name: 'Nekopara', name_zh: '巧克力与香子兰', category: 'Game', val: 25 },
 
     ],
     links: [
@@ -357,5 +419,58 @@ const rawData = {
         { source: 'Valve', target: 'Dota2', relation: 'Developer', relation_zh: '开发' },
         { source: 'Valve', target: 'HLAlyx', relation: 'Developer', relation_zh: '开发' },
         { source: 'Microsoft', target: 'OpenAI', relation: 'Partner', relation_zh: '合作伙伴' },
+        // Galgame/JRPG Links
+        // Type-Moon
+        { source: 'TypeMoon', target: 'FateSN', relation: 'Creator', relation_zh: '创造' },
+        { source: 'TypeMoon', target: 'Tsukihime', relation: 'Creator', relation_zh: '创造' },
+        { source: 'TypeMoon', target: 'Mahoyo', relation: 'Creator', relation_zh: '创造' },
+        { source: 'TypeMoon', target: 'FGO', relation: 'Creator', relation_zh: '创造' },
+        { source: 'SonyGroup', target: 'FGO', relation: 'Publisher (Aniplex)', relation_zh: '发行 (Aniplex)' },
+
+        // Key / Visual Arts (Tencent Owner)
+        { source: 'Tencent', target: 'VisualArts', relation: 'Acquired', relation_zh: '收购' },
+        { source: 'VisualArts', target: 'Key', relation: 'Owner', relation_zh: '拥有' },
+        { source: 'Key', target: 'Clannad', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Key', target: 'Air', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Key', target: 'Kanon', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Key', target: 'SummerPockets', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Key', target: 'AngelBeats', relation: 'Developer', relation_zh: '开发' },
+
+        // Nitro+ / MAGES.
+        { source: 'NitroPlus', target: 'Saya', relation: 'Developer', relation_zh: '开发' },
+        { source: 'NitroPlus', target: 'SteinsGate', relation: 'Co-Dev', relation_zh: '联合开发' },
+        { source: 'MAGES', target: 'SteinsGate', relation: 'Developer', relation_zh: '开发' },
+        { source: 'MAGES', target: 'ChaosHead', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Colopl', target: 'MAGES', relation: 'Owner', relation_zh: '拥有' }, // Colopl owns MAGES now
+
+        // Falcom
+        { source: 'Falcom', target: 'TrailsSeries', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Falcom', target: 'YsSeries', relation: 'Developer', relation_zh: '开发' },
+
+        // Koei Tecmo
+        { source: 'KoeiTecmo', target: 'Gust', relation: 'Owner', relation_zh: '拥有' },
+        { source: 'KoeiTecmo', target: 'TeamNinja', relation: 'Owner', relation_zh: '拥有' },
+        { source: 'Gust', target: 'AtelierRyza', relation: 'Developer', relation_zh: '开发' },
+        { source: 'TeamNinja', target: 'Nioh2', relation: 'Developer', relation_zh: '开发' },
+        { source: 'TeamNinja', target: 'NinjaGaiden', relation: 'Developer', relation_zh: '开发' },
+        { source: 'TeamNinja', target: 'DoA', relation: 'Developer', relation_zh: '开发' },
+        { source: 'KoeiTecmo', target: 'ThreeKingdoms', relation: 'Developer', relation_zh: '开发' },
+        { source: 'KoeiTecmo', target: 'TypeMoon', relation: 'Partner', relation_zh: '合作 (Fate/Remnant)' },
+
+        // Spike Chunsoft
+        { source: 'SpikeChunsoft', target: 'Danganronpa', relation: 'Developer', relation_zh: '开发' },
+        { source: 'SpikeChunsoft', target: 'AITheSomniumFiles', relation: 'Developer', relation_zh: '开发' },
+
+        // Cygames
+        { source: 'Cygames', target: 'GBF', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Cygames', target: 'UmaMusume', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Cygames', target: 'Shadowverse', relation: 'Developer', relation_zh: '开发' },
+        { source: 'CyberAgent', target: 'Cygames', relation: 'Owner', relation_zh: '拥有' },
+
+        // Others
+        { source: 'AliceSoft', target: 'Rance', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Aquaplus', target: 'Utawarerumono', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Frontwing', target: 'Gritaia', relation: 'Developer', relation_zh: '开发' },
+        { source: 'NekoparaDev', target: 'Nekopara', relation: 'Developer', relation_zh: '开发' },
     ]
 };
