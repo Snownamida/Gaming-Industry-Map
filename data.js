@@ -254,6 +254,34 @@ const rawData = {
         { id: 'NekoparaDev', name: 'NEKO WORKs', name_zh: 'NEKO WORKs', category: 'Studio', val: 25 },
         { id: 'Nekopara', name: 'Nekopara', name_zh: '巧克力与香子兰', category: 'Game', val: 25 },
 
+        // --- MORE FAMOUS GAMES (Indie / Major) ---
+        { id: 'TeamCherry', name: 'Team Cherry', name_zh: 'Team Cherry', category: 'Studio', val: 30 },
+        { id: 'HollowKnight', name: 'Hollow Knight', name_zh: '空洞骑士', category: 'Game', val: 30 },
+        { id: 'Silksong', name: 'Hollow Knight: Silksong', name_zh: '丝之歌', category: 'Game', val: 35 }, // Anticipated
+
+        { id: 'Supergiant', name: 'Supergiant Games', name_zh: 'Supergiant Games', category: 'Studio', val: 30 },
+        { id: 'Hades', name: 'Hades', name_zh: '黑帝斯 (Hades)', category: 'Game', val: 30 },
+
+        { id: 'ReLogic', name: 'Re-Logic', name_zh: 'Re-Logic', category: 'Studio', val: 30 },
+        { id: 'Terraria', name: 'Terraria', name_zh: '泰拉瑞亚', category: 'Game', val: 30 },
+
+        { id: 'ConcernedApe', name: 'ConcernedApe', name_zh: 'ConcernedApe', category: 'Studio', val: 30 },
+        { id: 'StardewValley', name: 'Stardew Valley', name_zh: '星露谷物语', category: 'Game', val: 30 },
+
+        { id: 'Innersloth', name: 'Innersloth', name_zh: 'Innersloth', category: 'Studio', val: 30 },
+        { id: 'AmongUs', name: 'Among Us', name_zh: 'Among Us', category: 'Game', val: 30 },
+
+        { id: 'PocketPair', name: 'Pocket Pair', name_zh: 'Pocket Pair', category: 'Studio', val: 30 },
+        { id: 'Palworld', name: 'Palworld', name_zh: '幻兽帕鲁', category: 'Game', val: 35 },
+
+        { id: 'Larian', name: 'Larian Studios', name_zh: '拉瑞安工作室', category: 'Studio', val: 35 },
+        { id: 'BG3', name: 'Baldur\'s Gate 3', name_zh: '博德之门3', category: 'Game', val: 40 },
+        { id: 'Divinity2', name: 'Divinity: OS 2', name_zh: '神界：原罪2', category: 'Game', val: 30 },
+
+        { id: 'Lucasfilm', name: 'Lucasfilm Games', name_zh: '卢卡斯影业游戏', category: 'Publisher', val: 35 },
+        // Linked to Disney usually, but keeping simple
+
+
     ],
     links: [
         // --- RELATIONSHIPS (Owner/Acquired/Publisher/Developer...) ---
@@ -467,10 +495,23 @@ const rawData = {
         { source: 'Cygames', target: 'Shadowverse', relation: 'Developer', relation_zh: '开发' },
         { source: 'CyberAgent', target: 'Cygames', relation: 'Owner', relation_zh: '拥有' },
 
-        // Others
         { source: 'AliceSoft', target: 'Rance', relation: 'Developer', relation_zh: '开发' },
         { source: 'Aquaplus', target: 'Utawarerumono', relation: 'Developer', relation_zh: '开发' },
         { source: 'Frontwing', target: 'Gritaia', relation: 'Developer', relation_zh: '开发' },
         { source: 'NekoparaDev', target: 'Nekopara', relation: 'Developer', relation_zh: '开发' },
+
+        // --- NEW LINKS ---
+        { source: 'TeamCherry', target: 'HollowKnight', relation: 'Developer', relation_zh: '开发' },
+        { source: 'TeamCherry', target: 'Silksong', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Supergiant', target: 'Hades', relation: 'Developer', relation_zh: '开发' },
+        { source: 'ReLogic', target: 'Terraria', relation: 'Developer', relation_zh: '开发' },
+        { source: 'ConcernedApe', target: 'StardewValley', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Innersloth', target: 'AmongUs', relation: 'Developer', relation_zh: '开发' },
+        { source: 'PocketPair', target: 'Palworld', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Larian', target: 'BG3', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Larian', target: 'Divinity2', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Tencent', target: 'Larian', relation: 'Investor (30%)', relation_zh: '投资 (30%)' }, // Tencent owns ~30%
+        { source: 'Lucasfilm', target: 'FallenOrder', relation: 'Licensor', relation_zh: '授权' }, // Star Wars connection
+        { source: 'Ubisoft', target: 'Lucasfilm', relation: 'Partner (Outlaws)', relation_zh: '合作 (星球大战)' },
     ]
 };
