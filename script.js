@@ -302,6 +302,11 @@ window.addEventListener('resize', () => myChart.resize());
 
 document.getElementById('lang-btn').addEventListener('click', toggleLanguage);
 
+document.getElementById('sidebar-toggle').addEventListener('click', () => {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('collapsed');
+});
+
 // Init
 updateUIText();
 updateChart();
