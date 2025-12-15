@@ -1,0 +1,18 @@
+{
+    "name": "gaming-industry-map",
+    "version": "1.0.0",
+    "description": "Interactive visualization of the gaming industry",
+    "main": "src/main.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "echarts": "^6.0.0",
+        "vite": "^6.4.1"
+    }
+}

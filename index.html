@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Gaming Industry Map | 全球游戏产业格局图</title>
     <!-- ECharts CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <!-- ECharts handled by Vite -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- Google Fonts for premium feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,13 +48,13 @@
 
         <div class="controls">
             <button id="lang-btn" class="lang-btn">语言 / Language</button>
-            <button id="reset-btn" onclick="resetZoom()">Reset View</button>
-            <button id="physics-btn" onclick="togglePhysics()">Toggle Physics</button>
+            <button id="reset-btn">Reset View</button>
+            <button id="physics-btn">Toggle Physics</button>
         </div>
     </div>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <!-- Main Bundle -->
+    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
