@@ -42,7 +42,7 @@ const categoryColors = {
 const chartDom = document.getElementById('graph-container');
 const myChart = echarts.init(chartDom);
 let option;
-let physics = true;
+let physics = false;
 
 // Helper to get text based on lang
 function t(key) {
