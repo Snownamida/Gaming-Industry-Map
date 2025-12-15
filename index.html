@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,39 +13,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="app">
         <div id="graph-container"></div>
-        
+
         <div class="sidebar">
             <div class="header">
-                <h1>GAMING MAP</h1>
-                <p>Global Industry Visualization</p>
+                <h1 id="app-title">GAMING MAP</h1>
+                <p id="app-subtitle">Global Industry Visualization</p>
             </div>
-            
+
             <div class="search-box">
                 <input type="text" id="search-input" placeholder="Search Company or Game...">
             </div>
 
             <div id="info-panel" class="info-panel">
-                <div class="placeholder-text">Select a node to view details</div>
+                <div class="placeholder-text" id="info-placeholder">Select a node to view details</div>
             </div>
-            
+
             <div class="legend">
-                <h3>Legend</h3>
+                <h3 id="legend-title">Legend</h3>
                 <ul id="legend-list">
                     <!-- Populated by JS -->
                 </ul>
             </div>
         </div>
-        
+
         <div class="controls">
-            <button onclick="resetZoom()">Reset View</button>
-            <button onclick="togglePhysics()">Toggle Physics</button>
+            <button id="lang-btn" class="lang-btn">语言 / Language</button>
+            <button id="reset-btn" onclick="resetZoom()">Reset View</button>
+            <button id="physics-btn" onclick="togglePhysics()">Toggle Physics</button>
         </div>
     </div>
 
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
