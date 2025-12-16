@@ -41,6 +41,8 @@ export const data = {
 
         // Studios
         { id: 'Aniplex', name: { en: 'Aniplex', zh: 'Aniplex' }, category: 2, symbolSize: 40 }, // Under Sony
+        { id: 'Amblin', name: { en: 'Amblin Entertainment', zh: '安培林娱乐' }, category: 2, symbolSize: 35 },
+        { id: 'WB_TV', name: { en: 'Warner Bros. Television', zh: '华纳兄弟电视' }, category: 2, symbolSize: 35 },
         { id: 'Ghibli', name: { en: 'Studio Ghibli', zh: '吉卜力' }, category: 2, symbolSize: 40 },
         { id: 'CoMixWave', name: { en: 'CoMix Wave Films', zh: 'CoMix Wave' }, category: 2, symbolSize: 35 },
         { id: 'KyoAni', name: { en: 'Kyoto Animation', zh: '京都动画' }, category: 2, symbolSize: 35 },
@@ -116,6 +118,7 @@ export const data = {
         { id: 'BoyAndHeron', name: { en: 'The Boy and the Heron', zh: '你想活出怎样的人生' }, category: 5, symbolSize: 25 },
         { id: 'Leon', name: { en: 'The Professional', zh: '这个杀手不太冷' }, category: 5, symbolSize: 25 },
         { id: 'SilentVoice', name: { en: 'A Silent Voice', zh: '声之形' }, category: 5, symbolSize: 25 },
+        { id: 'ThursdayMurderClub', name: { en: 'The Thursday Murder Club', zh: '周四推理俱乐部' }, category: 5, symbolSize: 25 },
 
         // TV Series
         { id: 'Mandalorian', name: { en: 'The Mandalorian', zh: '曼达洛人' }, category: 6, symbolSize: 25 },
@@ -128,6 +131,10 @@ export const data = {
         { id: 'OMITB', name: { en: 'Only Murders in the Building', zh: '大楼里只有谋杀' }, category: 6, symbolSize: 25 },
         { id: 'InteriorChinatown', name: { en: 'Interior Chinatown', zh: '内景唐人街' }, category: 6, symbolSize: 25 },
         { id: 'DemonSlayer', name: { en: 'Demon Slayer', zh: '鬼灭之刃' }, category: 6, symbolSize: 30 },
+        { id: 'TheBear', name: { en: 'The Bear', zh: '熊家餐馆' }, category: 6, symbolSize: 25 },
+        { id: 'Shogun', name: { en: 'Shogun', zh: '幕府将军' }, category: 6, symbolSize: 25 },
+        { id: 'HandmaidsTale', name: { en: 'The Handmaid\'s Tale', zh: '使女的故事' }, category: 6, symbolSize: 25 },
+        { id: 'Friends', name: { en: 'Friends', zh: '老友记' }, category: 6, symbolSize: 30 },
 
         // China Movies
         { id: 'WanderingEarth', name: { en: 'The Wandering Earth', zh: '流浪地球' }, category: 5, symbolSize: 30 },
@@ -175,6 +182,7 @@ export const data = {
         { source: 'WBD', target: 'HBO', value: { en: 'Owns', zh: '拥有' } },
         { source: 'WBD', target: 'DC_Studios', value: { en: 'Owns', zh: '拥有' } },
         { source: 'WBD', target: 'NewLine', value: { en: 'Owns', zh: '拥有' } },
+        { source: 'WBD', target: 'WB_TV', value: { en: 'Owns', zh: '拥有' } },
 
         { source: 'Universal', target: 'Illumination', value: { en: 'Owns', zh: '拥有' } },
         { source: 'Universal', target: 'DreamWorks', value: { en: 'Owns', zh: '拥有' } },
@@ -184,6 +192,8 @@ export const data = {
         { source: 'Lucasfilm', target: 'KKennedy', value: { en: 'President', zh: '总裁' } },
         { source: 'DC_Studios', target: 'JGunn', value: { en: 'Co-CEO', zh: '联席CEO' } },
         { source: 'Ghibli', target: 'Miyazaki', value: { en: 'Founder', zh: '创始人' } },
+
+        { source: 'SSpielberg', target: 'Amblin', value: { en: 'Founder', zh: '创始人' } },
 
         { source: 'CNolan', target: 'Oppenheimer', value: { en: 'Directed', zh: '导演' } },
         { source: 'CNolan', target: 'DarkKnight', value: { en: 'Directed', zh: '导演' } },
@@ -229,6 +239,8 @@ export const data = {
         { source: 'WB_Pictures', target: 'DarkKnight', value: { en: 'Distributed', zh: '发行' } },
         { source: 'WB_Pictures', target: 'Inception', value: { en: 'Distributed', zh: '发行' } },
         { source: 'NewLine', target: 'LOTR', value: { en: 'Produced', zh: '制作' } },
+        { source: 'WB_TV', target: 'Friends', value: { en: 'Produced', zh: '制作' } },
+        { source: 'HBO', target: 'Friends', value: { en: 'Streaming', zh: '流媒体' } },
 
         { source: 'DC_Studios', target: 'SupermanLegacy', value: { en: 'Producing', zh: '制作' } },
         { source: 'DC_Studios', target: 'Joker', value: { en: 'Associated', zh: '关联' } },
@@ -240,6 +252,7 @@ export const data = {
 
         { source: 'Universal', target: 'Oppenheimer', value: { en: 'Distributed', zh: '发行' } },
         { source: 'Universal', target: 'JurassicPark', value: { en: 'Distributed', zh: '发行' } },
+        { source: 'Amblin', target: 'JurassicPark', value: { en: 'Produced', zh: '制作' } },
 
         { source: '20thCentury', target: 'Avatar', value: { en: 'Produced', zh: '制作' } },
         { source: 'Paramount', target: 'TopGun', value: { en: 'Distributed', zh: '发行' } },
@@ -248,11 +261,16 @@ export const data = {
         { source: 'Sony', target: 'SpiderVerse', value: { en: 'Produced', zh: '制作' } },
         { source: 'Netflix', target: 'StrangerThings', value: { en: 'Original', zh: '原创' } },
         { source: 'Netflix', target: 'SquidGame', value: { en: 'Original', zh: '原创' } },
+        { source: 'Netflix', target: 'ThursdayMurderClub', value: { en: 'Produced', zh: '出品' } },
+        { source: 'Amblin', target: 'ThursdayMurderClub', value: { en: 'Produced', zh: '制作' } },
 
         { source: 'Amazon', target: 'Fallout', value: { en: 'Original', zh: '原创' } },
         { source: 'JNolan', target: 'Fallout', value: { en: 'producer', zh: '制片人' } },
         { source: 'Hulu', target: 'OMITB', value: { en: 'Original', zh: '原创' } },
         { source: 'Hulu', target: 'InteriorChinatown', value: { en: 'Original', zh: '原创' } },
+        { source: 'Hulu', target: 'TheBear', value: { en: 'Original', zh: '原创' } },
+        { source: 'Hulu', target: 'Shogun', value: { en: 'Original', zh: '原创' } },
+        { source: 'Hulu', target: 'HandmaidsTale', value: { en: 'Original', zh: '原创' } },
 
         { source: 'Gaumont', target: 'Leon', value: { en: 'Produced', zh: '制作' } },
         { source: 'Ghibli', target: 'SpiritedAway', value: { en: 'Produced', zh: '制作' } },
