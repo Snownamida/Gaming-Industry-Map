@@ -10,6 +10,7 @@ let option;
 
 // Theme Colors
 const colors = [
+    '#00d2ff', // Region (Cyan)
     '#f43f5e', // Corporation (Red/Pink)
     '#6366f1', // Studio (Indigo)
     '#10b981', // Director (Emerald)
