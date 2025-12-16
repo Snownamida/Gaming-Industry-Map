@@ -1,60 +1,50 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Gaming Industry Map | 全球游戏产业格局图</title>
-    <!-- ECharts CDN -->
-    <!-- ECharts handled by Vite -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <!-- Google Fonts for premium feel -->
+    <title>Film Industry Map | Global Cinema Landscape</title>
+    <meta name="description"
+        content="Interactive visualization of the global film industry structure, connecting studios, directors, and major works.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 </head>
 
 <body>
     <div id="app">
-        <div id="graph-container"></div>
-
-        <div class="sidebar">
-            <div class="header">
-                <div>
-                    <h1 id="app-title">GAMING MAP</h1>
-                    <p id="app-subtitle">Global Industry Visualization</p>
-                </div>
-                <button id="sidebar-toggle" class="sidebar-toggle">▼</button>
+        <header>
+            <div class="logo">
+                <h1>Film<span class="highlight">Map</span></h1>
+                <p>The Cinematic Universe Visualized</p>
             </div>
-
-            <div id="sidebar-content">
-
-                <div class="search-box">
-                    <input type="text" id="search-input" placeholder="Search Company or Game...">
-                </div>
-
-                <div id="info-panel" class="info-panel">
-                    <div class="placeholder-text" id="info-placeholder">Select a node to view details</div>
-                </div>
-
-                <div class="legend">
-                    <h3 id="legend-title">Legend</h3>
-                    <ul id="legend-list">
-                        <!-- Populated by JS -->
-                    </ul>
-                </div>
+            <div class="controls">
+                <button class="btn-glass" id="lang-toggle" style="margin-right: 10px;">English</button>
+                <button class="btn-glass" id="reset-zoom">Reset View</button>
             </div>
+        </header>
+
+        <main id="chart-container"></main>
+
+        <div class="overlay-info" id="info-panel">
+            <h3>Select a Node</h3>
+            <p>Hover or click on a studio, person, or movie to reveal connections.</p>
         </div>
 
-        <div class="controls">
-            <button id="lang-btn" class="lang-btn">语言 / Language</button>
-            <button id="reset-btn">Reset View</button>
-            <button id="physics-btn">Toggle Physics</button>
-        </div>
+        <footer>
+            <p>Data is illustrative. &copy; 2025 FilmMap.</p>
+        </footer>
     </div>
-
-    <!-- Main Bundle -->
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>
