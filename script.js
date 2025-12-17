@@ -16,7 +16,8 @@ const colors = [
     '#10b981', // Director (Emerald)
     '#f59e0b', // Producer (Amber)
     '#3b82f6', // Movie (Blue)
-    '#8b5cf6'  // TV Series (Violet)
+    '#8b5cf6', // TV Series (Violet)
+    '#db2777'  // Theme Park (Pink/Magenta)
 ];
 
 // UI Translations

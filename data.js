@@ -1,43 +1,48 @@
 export const data = {
     categories: [
-        { name: { en: 'Region', zh: '地区/产业' } }, // New Category 0
-        { name: { en: 'Distributor', zh: '发行商/集团' } }, // 1
-        { name: { en: 'Production Studio', zh: '制作工作室' } }, // 2
+        { name: { en: 'Region', zh: '地区' } }, // 0
+        { name: { en: 'Distributor / Conglomerate', zh: '发行商/集团' } }, // 1
+        { name: { en: 'Production Studio', zh: '制作公司' } }, // 2
         { name: { en: 'Director', zh: '导演' } }, // 3
-        { name: { en: 'Producer', zh: '制片人' } }, // 4
+        { name: { en: 'Producer / Exec', zh: '制片人/高管' } }, // 4
         { name: { en: 'Movie', zh: '电影' } }, // 5
-        { name: { en: 'TV Series', zh: '剧集' } } // 6
+        { name: { en: 'TV Series', zh: '剧集' } }, // 6
+        { name: { en: 'Theme Park', zh: '主题乐园' } } // 7
     ],
     nodes: [
+        // Theme Parks
+        { id: 'UniversalStudios', name: { en: 'Universal Studios', zh: '环球影城' }, category: 7, symbolSize: 50, label: { show: true } },
+        { id: 'Disneyland', name: { en: 'Disneyland', zh: '迪士尼乐园' }, category: 7, symbolSize: 50, label: { show: true } },
+
         // Regions
         { id: 'Hollywood', name: { en: 'Hollywood', zh: '好莱坞' }, category: 0, symbolSize: 80, label: { show: true } },
         { id: 'ChinaFilm', name: { en: 'Chinese Cinema', zh: '华语电影' }, category: 0, symbolSize: 80, label: { show: true } },
-        { id: 'JapanFilm', name: { en: 'Japanese Cinema', zh: '日本影视' }, category: 0, symbolSize: 70, label: { show: true } },
-        { id: 'FrenchFilm', name: { en: 'French Cinema', zh: '法国电影' }, category: 0, symbolSize: 70, label: { show: true } },
+        { id: 'JapanFilm', name: { en: 'Japanese Cinema', zh: '日本影视' }, category: 0, symbolSize: 60, label: { show: true } },
+        { id: 'FrenchFilm', name: { en: 'French Cinema', zh: '法国电影' }, category: 0, symbolSize: 60, label: { show: true } },
 
         // Corporations (Category 1)
-        { id: 'Disney', name: { en: 'The Walt Disney Company', zh: '华特迪士尼' }, category: 1, symbolSize: 60, label: { show: true } },
+        { id: 'Disney', name: { en: 'Disney', zh: '迪士尼' }, category: 1, symbolSize: 60, label: { show: true } },
         { id: 'WBD', name: { en: 'Warner Bros. Discovery', zh: '华纳兄弟探索' }, category: 1, symbolSize: 60, label: { show: true } },
-        { id: 'Universal', name: { en: 'Universal Pictures', zh: '环球影业' }, category: 1, symbolSize: 50, label: { show: true } },
-        { id: 'Paramount', name: { en: 'Paramount Global', zh: '派拉蒙全球' }, category: 1, symbolSize: 50, label: { show: true } },
+        { id: 'Universal', name: { en: 'Universal', zh: '环球' }, category: 1, symbolSize: 60, label: { show: true } },
+        { id: 'Paramount', name: { en: 'Paramount', zh: '派拉蒙' }, category: 1, symbolSize: 50 },
         { id: 'Sony', name: { en: 'Sony Pictures', zh: '索尼影视' }, category: 1, symbolSize: 50, label: { show: true } },
-        { id: 'Netflix', name: { en: 'Netflix', zh: '网飞 (Netflix)' }, category: 1, symbolSize: 55, label: { show: true } },
-        { id: 'Amazon', name: { en: 'Amazon MGM', zh: '亚马逊MGM' }, category: 1, symbolSize: 55, label: { show: true } },
+        { id: 'Netflix', name: { en: 'Netflix', zh: '网飞' }, category: 1, symbolSize: 55 },
+        { id: 'Amazon', name: { en: 'Amazon MGM', zh: '亚马逊米高梅' }, category: 1, symbolSize: 55 },
 
         // Studios
-        { id: 'Hulu', name: { en: 'Hulu', zh: 'Hulu' }, category: 1, symbolSize: 45, label: { show: true } },
+        { id: 'Hulu', name: { en: 'Hulu', zh: 'Hulu' }, category: 1, symbolSize: 45 },
 
         // China Corps
-        { id: 'CFG', name: { en: 'China Film Group', zh: '中影集团' }, category: 1, symbolSize: 50, label: { show: true } },
-        { id: 'Tencent', name: { en: 'Tencent Pictures', zh: '腾讯影业' }, category: 1, symbolSize: 45, label: { show: true } },
-        { id: 'Bona', name: { en: 'Bona Film Group', zh: '博纳影业' }, category: 1, symbolSize: 45, label: { show: true } },
-        { id: 'LightChaser', name: { en: 'Light Chaser Animation', zh: '追光动画' }, category: 2, symbolSize: 35 },
+        { id: 'CFG', name: { en: 'China Film Group', zh: '中影集团' }, category: 1, symbolSize: 55, label: { show: true } },
+        { id: 'Tencent', name: { en: 'Tencent Pictures', zh: '腾讯影业' }, category: 1, symbolSize: 45 },
+        { id: 'Bona', name: { en: 'Bona Film Group', zh: '博纳影业' }, category: 1, symbolSize: 45 },
+        { id: 'LightChaser', name: { en: 'Light Chaser Animation', zh: '追光动画' }, category: 2, symbolSize: 40 },
 
         // Japan Distributors
         { id: 'Toho', name: { en: 'Toho', zh: '东宝' }, category: 1, symbolSize: 50, label: { show: true } },
-        { id: 'Toei', name: { en: 'Toei Company', zh: '东映' }, category: 1, symbolSize: 50, label: { show: true } },
-        { id: 'Shochiku', name: { en: 'Shochiku', zh: '松竹' }, category: 1, symbolSize: 45, label: { show: true } },
-        { id: 'Kadokawa', name: { en: 'Kadokawa', zh: '角川' }, category: 1, symbolSize: 45, label: { show: true } },
+        { id: 'Toei', name: { en: 'Toei Company', zh: '东映' }, category: 1, symbolSize: 50 },
+        { id: 'Shochiku', name: { en: 'Shochiku', zh: '松竹' }, category: 1, symbolSize: 45 },
+        { id: 'Kadokawa', name: { en: 'Kadokawa', zh: '角川' }, category: 1, symbolSize: 45 },
 
         // Studios
         { id: 'Aniplex', name: { en: 'Aniplex', zh: 'Aniplex' }, category: 2, symbolSize: 40 }, // Under Sony
@@ -144,6 +149,25 @@ export const data = {
         { id: 'ChangJinHu', name: { en: 'The Battle at Lake Changjin', zh: '长津湖' }, category: 5, symbolSize: 30 },
     ],
     links: [
+        // Theme Park Links (Universal - The IP Aggregator)
+        { source: 'Universal', target: 'UniversalStudios', value: { en: 'Owns', zh: '拥有' } },
+        { source: 'UniversalStudios', target: 'HarryPotter', value: { en: 'Wizarding World', zh: '哈利波特园区' } },
+        { source: 'UniversalStudios', target: 'JurassicPark', value: { en: 'Velocicoaster', zh: '侏罗纪园区' } },
+        { source: 'UniversalStudios', target: 'DreamWorks', value: { en: 'Shrek/KFP Land', zh: '梦工厂园区' } }, // Shrek, Kung Fu Panda
+        { source: 'UniversalStudios', target: 'Illumination', value: { en: 'Minion Land', zh: '小黄人乐园' } },
+        { source: 'UniversalStudios', target: 'Marvel', value: { en: 'Rights (Orlando)', zh: '漫威岛(佛州)' } }, // Islands of Adventure
+        { source: 'UniversalStudios', target: '20thCentury', value: { en: 'The Simpsons', zh: '辛普森一家' } }, // Springfield rights
+        { source: 'UniversalStudios', target: 'Amblin', value: { en: 'Creative Founder', zh: '乐园奠基人' } }, // Spielberg helped design the park (ET, Jaws)
+        { source: 'UniversalStudios', target: 'Nezha', value: { en: 'Attraction (Beijing)', zh: '未来水世界/哪吒' } }, // Keeping Nezha as representative of Beijing local IP
+
+        // Theme Park Links (Disney - The Empire)
+        { source: 'Disney', target: 'Disneyland', value: { en: 'Owns', zh: '拥有' } },
+        { source: 'Disneyland', target: 'StarWars', value: { en: 'Galaxy\'s Edge', zh: '星战园区' } },
+        { source: 'Disneyland', target: 'Avengers', value: { en: 'Avengers Campus', zh: '复联园区' } },
+        { source: 'Disneyland', target: 'Avatar', value: { en: 'World of Avatar', zh: '阿凡达世界' } },
+        { source: 'Disneyland', target: 'Pixar', value: { en: 'Pixar Pier', zh: '皮克斯码头' } },
+        { source: 'Disneyland', target: 'Lucasfilm', value: { en: 'Star Tours', zh: '星际旅行' } }, // Historical link
+
         // Regional Connections
         { source: 'Hollywood', target: 'Disney', value: { en: 'Industry Hub', zh: '产业核心' } },
         { source: 'Hollywood', target: 'WBD', value: { en: 'Industry Hub', zh: '产业核心' } },
