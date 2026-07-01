@@ -16,4 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Initial Render
     ui.updateUI();
+
+    // 5. Deep link support (e.g. /#node=Tencent)
+    ui.restoreFromHash();
 });

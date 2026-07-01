@@ -1,14 +1,19 @@
 import { textResources } from '../data/locales.js';
 
+const STORAGE_KEY = 'gim-lang';
+
 export class I18nManager {
     constructor(defaultLang = 'zh') {
-        this.currentLang = defaultLang;
+        let saved = null;
+        try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) { /* storage unavailable */ }
+        this.currentLang = (saved === 'zh' || saved === 'en') ? saved : defaultLang;
         this.listeners = [];
     }
 
     setLanguage(lang) {
         if (this.currentLang !== lang) {
             this.currentLang = lang;
+            try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* storage unavailable */ }
             this.notify();
         }
     }
