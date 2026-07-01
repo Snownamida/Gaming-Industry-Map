@@ -238,3 +238,16 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border-color: white;
 }
+
+/* Static SEO/accessibility text kept out of the visual layout */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
