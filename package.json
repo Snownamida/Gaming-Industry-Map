@@ -1,18 +1,32 @@
 {
     "name": "gaming-industry-map",
-    "version": "1.0.0",
-    "description": "Interactive visualization of the gaming industry",
-    "main": "src/main.js",
+    "version": "1.1.0",
+    "description": "Interactive visualization of the global gaming industry: ownership, investment and development relationships between 200+ companies, studios, platforms and games. 全球游戏产业格局交互式图谱。",
+    "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "keywords": [
+        "gaming",
+        "industry",
+        "visualization",
+        "echarts",
+        "graph",
+        "游戏产业"
+    ],
+    "author": "Snownamida",
+    "license": "MIT",
+    "homepage": "https://gaming-industry-map.vercel.app",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Snownamida/Gaming-Industry-Map.git"
+    },
+    "dependencies": {
+        "echarts": "^6.0.0"
+    },
     "devDependencies": {
-        "echarts": "^6.0.0",
         "vite": "^6.4.1"
     }
 }
