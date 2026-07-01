@@ -239,6 +239,23 @@ body {
     border-color: white;
 }
 
+.kofi-link {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 6px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    align-self: flex-start;
+    transition: all 0.2s;
+}
+
+.kofi-link:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
 /* Static SEO/accessibility text kept out of the visual layout */
 .visually-hidden {
     position: absolute;
