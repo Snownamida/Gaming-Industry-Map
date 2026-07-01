@@ -84,6 +84,9 @@ export const gameData = {
         { id: 'Hangar13', name: 'Hangar 13', name_zh: 'Hangar 13', category: 'Studio', val: 25 },
         { id: 'Zynga', name: 'Zynga', name_zh: 'Zynga', category: 'Publisher', val: 35 },
 
+        { id: 'CyberAgent', name: 'CyberAgent', name_zh: 'CyberAgent', category: 'Conglomerate', val: 30 },
+        { id: 'Colopl', name: 'Colopl', name_zh: 'Colopl (コロプラ)', category: 'Publisher', val: 25 },
+
         { id: 'SquareEnix', name: 'Square Enix', name_zh: '史克威尔艾尼克斯', category: 'Publisher', val: 40 },
         { id: 'CreativeBusinessUnit1', name: 'Creative Business Unit I', name_zh: '第一开发部', category: 'Studio', val: 30 },
         { id: 'CreativeBusinessUnit3', name: 'Creative Business Unit III', name_zh: '第三开发部', category: 'Studio', val: 30 },
@@ -156,6 +159,7 @@ export const gameData = {
         // EA Games
         { id: 'Apex', name: 'Apex Legends', name_zh: 'Apex 英雄', category: 'Game', val: 25 },
         { id: 'Fifa', name: 'EA Sports FC 24', name_zh: 'EA Sports FC 24', category: 'Game', val: 25 },
+        { id: 'Battlefield2042', name: 'Battlefield 2042', name_zh: '战地2042', category: 'Game', val: 20 },
         { id: 'MassEffectLE', name: 'Mass Effect Legendary', name_zh: '质量效应传奇版', category: 'Game', val: 25 },
         { id: 'FallenOrder', name: 'Star Wars Jedi: Survivor', name_zh: '星球大战绝地：幸存者', category: 'Game', val: 25 },
         { id: 'Sims4', name: 'The Sims 4', name_zh: '模拟人生4', category: 'Game', val: 25 },
@@ -217,7 +221,7 @@ export const gameData = {
         { id: 'Saya', name: 'Saya no Uta', name_zh: '沙耶之歌', category: 'Game', val: 25 },
 
         // Falcom
-        { id: 'Falcom', name: 'Nihon Falcom', name_zh: '法夫纳 (Falcom)', category: 'Studio', val: 35 },
+        { id: 'Falcom', name: 'Nihon Falcom', name_zh: '日本Falcom (法老控)', category: 'Studio', val: 35 },
         { id: 'TrailsSeries', name: 'Trails Series', name_zh: '轨迹系列', category: 'Game', val: 30 },
         { id: 'YsSeries', name: 'Ys Series', name_zh: '伊苏系列', category: 'Game', val: 30 },
 
@@ -255,7 +259,7 @@ export const gameData = {
         // --- MORE FAMOUS GAMES (Indie / Major) ---
         { id: 'TeamCherry', name: 'Team Cherry', name_zh: 'Team Cherry', category: 'Studio', val: 30 },
         { id: 'HollowKnight', name: 'Hollow Knight', name_zh: '空洞骑士', category: 'Game', val: 30 },
-        { id: 'Silksong', name: 'Hollow Knight: Silksong', name_zh: '丝之歌', category: 'Game', val: 35 }, // Anticipated
+        { id: 'Silksong', name: 'Hollow Knight: Silksong', name_zh: '丝之歌', category: 'Game', val: 35 }, // Released 2025-09-04
 
         { id: 'Supergiant', name: 'Supergiant Games', name_zh: 'Supergiant Games', category: 'Studio', val: 30 },
         { id: 'Hades', name: 'Hades', name_zh: '黑帝斯 (Hades)', category: 'Game', val: 30 },
@@ -379,7 +383,10 @@ export const gameData = {
         { source: 'Respawn', target: 'Apex', relation: 'Developer', relation_zh: '开发' },
         { source: 'Respawn', target: 'FallenOrder', relation: 'Developer', relation_zh: '开发' },
         { source: 'BioWare', target: 'MassEffectLE', relation: 'Developer', relation_zh: '开发' },
-        { source: 'DICE', target: 'Fifa', relation: 'Developer', relation_zh: '开发' },
+        // EA Sports FC is developed by EA Vancouver / EA Romania (published by EA Sports),
+        // NOT by DICE — DICE develops Battlefield.
+        { source: 'EA', target: 'Fifa', relation: 'Publisher', relation_zh: '发行' },
+        { source: 'DICE', target: 'Battlefield2042', relation: 'Developer', relation_zh: '开发' },
         { source: 'Maxis', target: 'Sims4', relation: 'Developer', relation_zh: '开发' },
 
         // Ubisoft
@@ -444,7 +451,6 @@ export const gameData = {
         { source: 'Valve', target: 'CS2', relation: 'Developer', relation_zh: '开发' },
         { source: 'Valve', target: 'Dota2', relation: 'Developer', relation_zh: '开发' },
         { source: 'Valve', target: 'HLAlyx', relation: 'Developer', relation_zh: '开发' },
-        { source: 'Microsoft', target: 'OpenAI', relation: 'Partner', relation_zh: '合作伙伴' },
         // Galgame/JRPG Links
         // Type-Moon
         { source: 'TypeMoon', target: 'FateSN', relation: 'Creator', relation_zh: '创造' },
@@ -467,7 +473,7 @@ export const gameData = {
         { source: 'NitroPlus', target: 'SteinsGate', relation: 'Co-Dev', relation_zh: '联合开发' },
         { source: 'MAGES', target: 'SteinsGate', relation: 'Developer', relation_zh: '开发' },
         { source: 'MAGES', target: 'ChaosHead', relation: 'Developer', relation_zh: '开发' },
-        { source: 'Colopl', target: 'MAGES', relation: 'Owner', relation_zh: '拥有' }, // Colopl owns MAGES now
+        { source: 'Colopl', target: 'MAGES', relation: 'Owner', relation_zh: '拥有' }, // Colopl acquired MAGES in 2020
 
         // Falcom
         { source: 'Falcom', target: 'TrailsSeries', relation: 'Developer', relation_zh: '开发' },
