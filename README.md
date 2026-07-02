@@ -3,7 +3,7 @@
 > 交互式全球游戏产业关系图谱 — 一张图看懂谁拥有谁、谁开发了什么。
 > An interactive map of the global gaming industry — who owns whom, who made what.
 
-**在线访问 / Live demo:** <https://gaming-industry-map.vercel.app>
+**在线访问 / Live demo:** <https://gaming-map.snownamida.top>
 
 ![Screenshot](docs/screenshot.png)
 
