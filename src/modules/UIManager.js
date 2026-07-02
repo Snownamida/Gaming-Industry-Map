@@ -27,14 +27,20 @@ export class UIManager {
     }
 
     _initEvents() {
-        // Search
+        // Search: typing highlights the first match, Enter selects it
         this.searchInput.addEventListener('input', (e) => this._handleSearch(e.target.value));
+        this.searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const match = this._findMatch(this.searchInput.value);
+                if (match) this.selectNode(match);
+            }
+        });
 
         // Buttons
         this.resetBtn.addEventListener('click', () => this.graph.resetZoom());
         this.physicsBtn.addEventListener('click', () => {
             const isOn = this.graph.togglePhysics();
-            // Optional: update button text if we wanted strict "ON/OFF" text
+            this.physicsBtn.textContent = this.i18n.t(isOn ? 'physicsOn' : 'physicsOff');
         });
         this.langBtn.addEventListener('click', () => this.i18n.toggleLanguage());
 
@@ -47,28 +53,40 @@ export class UIManager {
         this.graph.onNodeClick = (data) => this.showNodeDetails(data);
     }
 
-    _handleSearch(term) {
-        if (!term) {
-            this.graph.unhighlight();
-            return;
-        }
-        term = term.toLowerCase();
-
-        // Search logic
-        const match = gameData.nodes.find(n =>
+    _findMatch(term) {
+        if (!term) return null;
+        term = term.trim().toLowerCase();
+        if (!term) return null;
+        return gameData.nodes.find(n =>
             n.name.toLowerCase().includes(term) ||
             (n.name_zh && n.name_zh.includes(term))
-        );
+        ) || null;
+    }
 
+    _handleSearch(term) {
+        const match = this._findMatch(term);
         if (match) {
-            // Find index in current nodes list. 
-            // NOTE: This assumes GraphManager.getGraphData() returns nodes in same order as gameData.nodes
-            // which it currently does (map).
-            const idx = gameData.nodes.indexOf(match);
-            this.graph.highlightNode(idx);
+            // NOTE: GraphManager.getGraphData() maps gameData.nodes in order,
+            // so the raw index matches the ECharts dataIndex.
+            this.graph.highlightNode(gameData.nodes.indexOf(match));
         } else {
             this.graph.unhighlight();
         }
+    }
+
+    // Select a node programmatically: details panel + highlight + shareable URL hash
+    selectNode(node) {
+        this.showNodeDetails(node);
+        this.graph.highlightNode(gameData.nodes.indexOf(node));
+    }
+
+    // Restore selection from a shared link like .../#node=Tencent
+    restoreFromHash() {
+        const m = window.location.hash.match(/^#node=(.+)$/);
+        if (!m) return;
+        const id = decodeURIComponent(m[1]);
+        const node = gameData.nodes.find(n => n.id === id);
+        if (node) this.selectNode(node);
     }
 
     updateUI() {
@@ -80,7 +98,7 @@ export class UIManager {
         this.searchInput.placeholder = t('searchPlaceholder');
         this.legendTitle.textContent = t('legendTitle');
         this.resetBtn.textContent = t('resetBtn');
-        // this.langBtn.textContent = t('langName'); 
+        this.physicsBtn.textContent = t(this.graph.physics ? 'physicsOn' : 'physicsOff');
 
         // Update Legend
         const categories = this.graph.update(); // Graph update returns categories
@@ -138,5 +156,10 @@ export class UIManager {
             <div class="info-desc">${desc}</div>
             <div class="info-meta">${relatedList}</div>
         `;
+
+        // Keep the URL shareable: copying it deep-links to this node
+        try {
+            history.replaceState(null, '', '#node=' + encodeURIComponent(data.id));
+        } catch (e) { /* history API unavailable */ }
     }
 }

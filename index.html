@@ -4,10 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Gaming Industry Map | 全球游戏产业格局图</title>
-    <!-- ECharts CDN -->
-    <!-- ECharts handled by Vite -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>全球游戏产业格局图 | Global Gaming Industry Map</title>
+    <meta name="description"
+        content="交互式全球游戏产业关系图谱：可视化腾讯、索尼、微软、任天堂等 200+ 游戏公司、工作室、平台与游戏之间的收购、投资与开发关系。Interactive map of the global gaming industry: ownership, investment and development links between 200+ companies, studios, platforms and games.">
+    <meta name="keywords" content="游戏产业, 游戏公司, 收购关系, 产业格局, gaming industry, game companies, acquisitions, visualization, ECharts">
+    <meta name="author" content="Snownamida">
+    <meta name="theme-color" content="#050510">
+    <link rel="canonical" href="https://gaming-industry-map.vercel.app/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gaming-industry-map.vercel.app/">
+    <meta property="og:title" content="全球游戏产业格局图 | Global Gaming Industry Map">
+    <meta property="og:description"
+        content="可视化 200+ 游戏公司、工作室、平台与游戏之间的收购、投资与开发关系。Interactive visualization of the global gaming industry landscape.">
+    <meta property="og:image" content="https://gaming-industry-map.vercel.app/og-image.png">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "全球游戏产业格局图 / Global Gaming Industry Map",
+        "url": "https://gaming-industry-map.vercel.app/",
+        "applicationCategory": "Visualization",
+        "operatingSystem": "Web",
+        "inLanguage": ["zh-CN", "en"],
+        "author": { "@type": "Person", "name": "Snownamida" },
+        "description": "交互式全球游戏产业关系图谱，覆盖腾讯、索尼、微软、任天堂、米哈游等 200 多家公司、工作室、平台与游戏之间的收购、投资与开发关系。"
+    }
+    </script>
+
     <!-- Google Fonts for premium feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +74,10 @@
                         <!-- Populated by JS -->
                     </ul>
                 </div>
+
+                <a class="kofi-link" href="https://ko-fi.com/snownamida" target="_blank" rel="noopener">
+                    ☕ 请我喝咖啡 / Buy me a coffee
+                </a>
             </div>
         </div>
 
@@ -52,6 +87,24 @@
             <button id="physics-btn">Toggle Physics</button>
         </div>
     </div>
+
+    <!-- Static, indexable description of the content -->
+    <section class="visually-hidden" aria-hidden="false">
+        <h2>关于本图 / About this map</h2>
+        <p>
+            全球游戏产业格局图是一张交互式力导向关系图，覆盖 200 多个节点：综合企业（腾讯、索尼集团、微软、任天堂、网易、Embracer、Valve）、
+            平台（PlayStation、Xbox、Switch、Steam、Epic 游戏商城）、发行商（EA、育碧、Take-Two、世嘉、卡普空、万代南梦宫、史克威尔艾尼克斯）、
+            知名工作室（顽皮狗、FromSoftware、拉瑞安、米哈游、游戏科学、Type-Moon、Key 社）以及《原神》《艾尔登法环》《博德之门3》《黑神话：悟空》《空洞骑士：丝之歌》等代表作品，
+            展示它们之间的收购、投资、开发与发行关系。支持中英双语切换、搜索定位与节点详情。数据持续更新。
+        </p>
+        <p>
+            The Global Gaming Industry Map is an interactive force-directed graph of 200+ nodes covering conglomerates
+            (Tencent, Sony, Microsoft, Nintendo, NetEase, Embracer, Valve), platforms (PlayStation, Xbox, Switch, Steam),
+            publishers (EA, Ubisoft, Take-Two, Sega, Capcom, Bandai Namco, Square Enix), studios (Naughty Dog, FromSoftware,
+            Larian, HoYoverse, Game Science) and landmark games, showing ownership, investment, development and publishing
+            relationships. Bilingual (Chinese/English), searchable, with per-node detail panels.
+        </p>
+    </section>
 
     <!-- Main Bundle -->
     <script type="module" src="/src/main.js"></script>

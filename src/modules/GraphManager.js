@@ -47,7 +47,9 @@ export class GraphManager {
             value: node.val,
             category: categories.findIndex(c => c.baseKey === node.category),
             label: {
-                show: node.val > 25 || node.category === 'Game'
+                // Threshold 10 restores the behavior of commit df11776,
+                // which was accidentally reverted during the Vite refactor.
+                show: node.val > 10 || node.category === 'Game'
             }
         }));
 
