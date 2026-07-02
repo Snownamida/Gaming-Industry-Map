@@ -1,6 +1,13 @@
-import * as echarts from 'echarts';
+// Import modulaire d'ECharts : seuls le graphe force + tooltip/légende sont
+// embarqués (~-60 % sur le bundle par rapport à `import * as echarts from 'echarts'`).
+import * as echarts from 'echarts/core';
+import { GraphChart } from 'echarts/charts';
+import { LegendComponent, TooltipComponent } from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
 import { categoryColors } from '../data/locales.js';
 import { gameData } from '../data/gameData.js';
+
+echarts.use([GraphChart, TooltipComponent, LegendComponent, CanvasRenderer]);
 
 export class GraphManager {
     constructor(domElement, i18n) {

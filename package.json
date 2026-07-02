@@ -5,8 +5,9 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview"
+        "build": "npm run check:data && vite build",
+        "preview": "vite preview",
+        "check:data": "node scripts/validate-data.mjs"
     },
     "keywords": [
         "gaming",
@@ -18,7 +19,7 @@
     ],
     "author": "Snownamida",
     "license": "MIT",
-    "homepage": "https://gaming-industry-map.vercel.app",
+    "homepage": "https://gaming-map.snownamida.top",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Snownamida/Gaming-Industry-Map.git"
