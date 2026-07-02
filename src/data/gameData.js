@@ -284,6 +284,31 @@ export const gameData = {
         // Linked to Disney usually, but keeping simple
 
 
+
+        // --- KOREAN MAJORS (ajout 2026-07) ---
+        { id: 'Nexon', name: 'Nexon', name_zh: 'Nexon (纳克森)', category: 'Publisher', val: 35 },
+        { id: 'Krafton', name: 'Krafton', name_zh: 'Krafton (魁匠团)', category: 'Publisher', val: 35 },
+        { id: 'NCSoft', name: 'NCSoft', name_zh: 'NCSoft (恩希软件)', category: 'Publisher', val: 30 },
+        { id: 'Neople', name: 'Neople', name_zh: 'Neople', category: 'Studio', val: 20 },
+        { id: 'Embark', name: 'Embark Studios', name_zh: 'Embark 工作室', category: 'Studio', val: 25 },
+        { id: 'PUBGStudios', name: 'PUBG Studios', name_zh: 'PUBG 工作室', category: 'Studio', val: 25 },
+        { id: 'UnknownWorlds', name: 'Unknown Worlds', name_zh: 'Unknown Worlds', category: 'Studio', val: 20 },
+        { id: 'ArenaNet', name: 'ArenaNet', name_zh: 'ArenaNet', category: 'Studio', val: 20 },
+        { id: 'MapleStory', name: 'MapleStory', name_zh: '冒险岛', category: 'Game', val: 20 },
+        { id: 'DnF', name: 'Dungeon & Fighter', name_zh: '地下城与勇士', category: 'Game', val: 25 },
+        { id: 'FirstDescendant', name: 'The First Descendant', name_zh: '第一后裔', category: 'Game', val: 15 },
+        { id: 'ARCRaiders', name: 'ARC Raiders', name_zh: 'ARC Raiders', category: 'Game', val: 25 },
+        { id: 'TheFinals', name: 'THE FINALS', name_zh: 'THE FINALS', category: 'Game', val: 20 },
+        { id: 'PUBG', name: 'PUBG: Battlegrounds', name_zh: '绝地求生', category: 'Game', val: 30 },
+        { id: 'inZOI', name: 'inZOI', name_zh: 'inZOI (云族裔)', category: 'Game', val: 20 },
+        { id: 'Subnautica', name: 'Subnautica', name_zh: '深海迷航', category: 'Game', val: 20 },
+        { id: 'Lineage', name: 'Lineage', name_zh: '天堂', category: 'Game', val: 20 },
+        { id: 'ThroneLiberty', name: 'Throne and Liberty', name_zh: '王座与自由', category: 'Game', val: 15 },
+        { id: 'GW2', name: 'Guild Wars 2', name_zh: '激战2', category: 'Game', val: 20 },
+
+        // --- 2025-26 : Ubisoft Vantage / consortium EA ---
+        { id: 'VantageStudios', name: 'Vantage Studios', name_zh: 'Vantage 工作室', category: 'Studio', val: 30 },
+        { id: 'PIF', name: 'PIF-led consortium', name_zh: '沙特PIF财团', category: 'Conglomerate', val: 35 },
     ],
     links: [
         // --- RELATIONSHIPS (Owner/Acquired/Publisher/Developer...) ---
@@ -517,5 +542,32 @@ export const gameData = {
         { source: 'Tencent', target: 'Larian', relation: 'Investor (30%)', relation_zh: '投资 (30%)' }, // Tencent owns ~30%
         { source: 'Lucasfilm', target: 'FallenOrder', relation: 'Licensor', relation_zh: '授权' }, // Star Wars connection
         { source: 'Ubisoft', target: 'Lucasfilm', relation: 'Partner (Outlaws)', relation_zh: '合作 (星球大战)' },
+
+        // --- KOREAN MAJORS ---
+        { source: 'Nexon', target: 'Neople', relation: 'Owner', relation_zh: '拥有' },
+        { source: 'Neople', target: 'DnF', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Nexon', target: 'MapleStory', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Nexon', target: 'Embark', relation: 'Owner', relation_zh: '拥有' },
+        { source: 'Embark', target: 'ARCRaiders', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Embark', target: 'TheFinals', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Nexon', target: 'FirstDescendant', relation: 'Publisher', relation_zh: '发行' },
+        { source: 'Krafton', target: 'PUBGStudios', relation: 'Owner', relation_zh: '拥有' },
+        { source: 'PUBGStudios', target: 'PUBG', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Krafton', target: 'UnknownWorlds', relation: 'Owner', relation_zh: '拥有' },
+        { source: 'UnknownWorlds', target: 'Subnautica', relation: 'Developer', relation_zh: '开发' },
+        { source: 'Krafton', target: 'inZOI', relation: 'Publisher', relation_zh: '发行' },
+        { source: 'Tencent', target: 'Krafton', relation: 'Investor (~14%)', relation_zh: '投资 (约14%)' },
+        { source: 'NCSoft', target: 'Lineage', relation: 'Developer', relation_zh: '开发' },
+        { source: 'NCSoft', target: 'ThroneLiberty', relation: 'Developer', relation_zh: '开发' },
+        { source: 'NCSoft', target: 'ArenaNet', relation: 'Owner', relation_zh: '拥有' },
+        { source: 'ArenaNet', target: 'GW2', relation: 'Developer', relation_zh: '开发' },
+
+        // --- 2025-26 : Vantage Studios (clôturé 21/11/2025) & rachat d'EA (en cours) ---
+        { source: 'Ubisoft', target: 'VantageStudios', relation: 'Owner (~74%)', relation_zh: '拥有 (约74%)' },
+        { source: 'Tencent', target: 'VantageStudios', relation: 'Investor (26.32%)', relation_zh: '投资 (26.32%)' },
+        { source: 'VantageStudios', target: 'ACMirage', relation: 'Franchise home', relation_zh: '旗下IP' },
+        { source: 'VantageStudios', target: 'R6Siege', relation: 'Franchise home', relation_zh: '旗下IP' },
+        { source: 'VantageStudios', target: 'FarCry6', relation: 'Franchise home', relation_zh: '旗下IP' },
+        { source: 'PIF', target: 'EA', relation: 'Acquiring ($55B, pending)', relation_zh: '收购中 (550亿美元, 待交割)' },
     ]
 };
