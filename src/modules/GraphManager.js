@@ -9,11 +9,16 @@ import { gameData } from '../data/gameData.js';
 
 echarts.use([GraphChart, TooltipComponent, LegendComponent, CanvasRenderer]);
 
+const PHYSICS_KEY = 'gim-physics';
+
 export class GraphManager {
     constructor(domElement, i18n) {
         this.chart = echarts.init(domElement);
         this.i18n = i18n;
-        this.physics = false;
+        // 物理引擎默认开启（布局动画更自然），用户的开关选择持久化
+        let saved = null;
+        try { saved = localStorage.getItem(PHYSICS_KEY); } catch (e) { /* storage unavailable */ }
+        this.physics = saved !== 'off';
         this.onNodeClick = null; // Callback
 
         // Resize handler
@@ -147,7 +152,10 @@ export class GraphManager {
             ]
         };
 
-        this.chart.setOption(option, { notMerge: true });
+        // Mode merge (PAS notMerge) : ECharts conserve les positions des nœuds
+        // par id et le zoom/pan courant. Un changement de langue ne fait donc
+        // que mettre à jour les textes, sans re-mélanger tout le graphe.
+        this.chart.setOption(option);
         return categories; // Return for Legend UI if needed
     }
 
@@ -157,6 +165,7 @@ export class GraphManager {
 
     togglePhysics() {
         this.physics = !this.physics;
+        try { localStorage.setItem(PHYSICS_KEY, this.physics ? 'on' : 'off'); } catch (e) { /* storage unavailable */ }
         this.chart.setOption({
             series: [{
                 force: { layoutAnimation: this.physics }
